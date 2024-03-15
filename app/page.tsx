@@ -1,6 +1,8 @@
 import axios from "axios";
 import Image from "next/image";
 
+
+// Implementing server-side rendering
 async function getUserDetails() {
   const response = await axios.get(
     "http://localhost:3000/api/user"
