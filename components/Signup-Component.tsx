@@ -4,7 +4,7 @@ import axios from "axios";
 import { ChangeEventHandler, useState } from "react";
 
 export function Signup() {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   return (
@@ -21,10 +21,10 @@ export function Signup() {
             <div className="pt-2">
               <LabelledInput
                 onChange={(e) => {
-                  setUsername(e.target.value);
+                  setEmail(e.target.value);
                 }}
-                label="Username"
-                placeholder="harkirat@gmail.com"
+                label="Email"
+                placeholder="shikhar@gmail.com"
               />
               <LabelledInput
                 onChange={(e) => {
@@ -39,7 +39,7 @@ export function Signup() {
                   const response = await axios.post(
                     "http://localhost:3000/api/user",
                     {
-                      username,
+                      email,
                       password,
                     }
                   );
